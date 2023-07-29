@@ -4,6 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(152, 188, 189);
  } 
  .container{
     border: none;
@@ -13,7 +14,43 @@ body{
     height: min-content;
     border-radius: 10px;
     padding: 28px;
-    background: transparent;
+    background: cadetblue;
 
  }
- 
+ .upper{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom:15px ;
+ }
+ textarea{
+   width: 90%;
+   height: 120px;
+   padding: 10px 15px;
+   background: none;
+   outline: none;
+   border: 1px solid white;
+   color: white;
+   font-size: 15px;
+   border-radius: 5px;
+   resize: none;
+   display: block;
+   margin-bottom: 15px;
+}
+.button{
+   display: flex;
+   justify-content: space-around;
+}
+
+button{
+   height: 55px;
+   width: calc(100% / 3 - 5px);
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   font-size: 16px;
+   font-weight: 500;
+}
+
+
+

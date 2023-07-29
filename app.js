@@ -18,14 +18,14 @@ start.onclick=()=>{
     rec.recognize(FileSelect.files[0])
     .progress(function(response){
         if(response.status == 'recognizing text'){
-            progress.innerHTML=response.status +'   '+ response.progress
+            progress.innerHTML="processing..."
         }else{
-            progress.innerHTML=response.status
+            progress.innerHTML="failed..."
         }
     })
     .then(function (data){
         textarea.innerHTML=data.text
-        progress.innerHTML= 'Done'
+        progress.innerHTML= 'Done!'
     })
     
 }
