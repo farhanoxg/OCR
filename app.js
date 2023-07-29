@@ -9,7 +9,7 @@ reset=document.querySelector(".reset");
 
 FileSelect.onchange = ()=>{
     var file =FileSelect.files[0];
-    var imgUrl= window.URL.createObjectURL(new Blob ([file],{type: 'image/txt/png/jpg'}))
+    var imgUrl= window.URL.createObjectURL(new Blob ([file],{type: 'image/jpg'}))
 }
 
 start.onclick=()=>{
@@ -18,9 +18,10 @@ start.onclick=()=>{
     rec.recognize(FileSelect.files[0])
     .progress(function(response){
         if(response.status == 'recognizing text'){
-            progress.innerHTML="processing..."
-        }else{
-            progress.innerHTML="failed..."
+            progress.innerHTML=response.status+ ' '+ response.progress 
+         }else{
+
+            progress.innerHTML=response.status
         }
     })
     .then(function (data){
