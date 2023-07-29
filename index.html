@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="container">
+     
+            <div class="upper">
+                <input type="file">
+                <div class="progress"></div>
+            </div>
+            <div class="bottom">
+<!-- ***********Here you can add img******** -->
+                <!-- <div>
+                <img src="">
+            </div> --> 
+                <div>
+                    <textarea name="" placeholder="Text will appear here" disabled></textarea>
+                </div>
+                <button>start</button>
+                <button class="copyBtn">copy text</button>
+                <button class="reset">reset</button>
+               
+            </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js"></script>
+</body>
+
+</html>
