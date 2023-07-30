@@ -5,7 +5,8 @@ progress = document.querySelector('.progress'),
 textarea = document.querySelector('textarea'),
 copyBtn = document.querySelector(".copyBtn"),
 container=document.querySelector(".container"),
-reset=document.querySelector(".reset");
+reset=document.querySelector(".reset"),
+button=document.querySelector(".button");
 
 FileSelect.onchange = ()=>{
     var file =FileSelect.files[0];
@@ -18,9 +19,9 @@ start.onclick=()=>{
     rec.recognize(FileSelect.files[0])
     .progress(function(response){
         if(response.status == 'recognizing text'){
-            progress.innerHTML=response.status+ ' '+ response.progress 
-         }else{
-
+            progress.innerHTML=response.status+' '+ response.progress 
+        }else{
+            
             progress.innerHTML=response.status
         }
     })
@@ -30,7 +31,6 @@ start.onclick=()=>{
     })
     
 }
-
 copyBtn.addEventListener("click", () => {
     let text = container.querySelector("textarea").textContent;
     navigator.clipboard.writeText(text);

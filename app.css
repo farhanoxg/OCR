@@ -5,6 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     background: rgb(152, 188, 189);
+    
  } 
  .container{
     border: none;
@@ -48,15 +49,40 @@ body{
 
 button{
    height: 55px;
-   width: calc(100% / 3 - 5px);
+   width: calc(100% / 3 - 15px);
    outline: none;
    border: none;
    border-radius: 5px;
    font-size: 16px;
    font-weight: 500;
+   color: white;
+   text-transform: capitalize;
+}
+.start{
+   background: green;
+}
+.reset{
+   background: red;
+}
+.copyBtn{
+   background: black;
 }
 
-
+.start:active {
+   transform: scale(0.95);
+}
+.copyBtn:active {
+   
+   transform: scale(0.95);
+}
+.reset:active {
+   
+   transform: scale(0.95);
+}
+textarea::placeholder{
+   color: white;
+   opacity: 80%;
+}
 
 
 
